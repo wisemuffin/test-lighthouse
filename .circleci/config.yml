@@ -1,0 +1,20 @@
+version: 2.1
+jobs:
+  buildLighthouse:
+    docker:
+      - image: circleci/node:10.16-browsers
+    working_directory: ~/wisemuffin-viz2
+    steps:
+      - checkout
+      - run: npm install
+      - run: CI=false npm run build
+      - run: sudo npm install -g @lhci/cli@0.3.x
+      - run:
+          name: lhci autorun
+          command: lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
+#
+workflows:
+  version: 2.1
+  build_and_test: # name of your workflow
+    jobs:
+      - buildLighthouse
