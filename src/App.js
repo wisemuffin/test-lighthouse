@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import ContextProvider from "./storeContext/ContextProvider";
 import ThemeProvider from "./hooks/ThemeProvider";
@@ -15,11 +14,7 @@ function App() {
   return (
     <ContextProvider>
       <ThemeProvider>
-        <Router>
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-          </Switch>
-        </Router>
+        <HomePage />
       </ThemeProvider>
     </ContextProvider>
   );

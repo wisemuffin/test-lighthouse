@@ -1,7 +1,6 @@
 import React, { useState, useContext, Fragment } from "react";
 // import { withStyles } from "@material-ui/core/styles";
 import { makeStyles } from "@material-ui/styles";
-import { Link } from "react-router-dom";
 import Drawer from "@material-ui/core/Drawer";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -266,9 +265,7 @@ const ResponsiveDrawer = props => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              <Link className={classes.link} to="/">
-                Wisemuffin
-              </Link>
+              Wisemuffin
             </Typography>
 
             {/* <div className={classes.grow} /> */}

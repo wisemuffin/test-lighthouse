@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { makeStyles } from "@material-ui/styles";
 
 import List from "@material-ui/core/List";
@@ -70,7 +69,7 @@ const DrawerItems = () => {
       <Divider />
       <List>
         {drawerItems.map((item, index) => (
-          <ListItem button key={index} component={Link} to={item.link}>
+          <ListItem button key={index} to={item.link}>
             <ListItemIcon>{item.icon}</ListItemIcon>
             {/* <ListItemLink href={item.link}> */}
             <ListItemText primary={item.name} />>{/* </ListItemLink> */}
