@@ -1,7 +1,6 @@
 ci:
   collect:
     numberOfRuns: 5
-    startServerCommand: serve -s build
     url:
       - http://localhost:5000/
   upload:
