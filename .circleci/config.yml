@@ -9,7 +9,8 @@ jobs:
       - run: npm install
       - run: CI=false npm run build
       - run: sudo npm install -g @lhci/cli@0.3.x
-      - run:
+      - run: startServerCommand
+      - run: npm install -g serve # reequired to run the build
           name: lhci autorun
           command: lhci autorun --upload.target=temporary-public-storage || echo "LHCI failed!"
 #
