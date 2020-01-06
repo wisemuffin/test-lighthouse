@@ -9,7 +9,7 @@ jobs:
       - run: npm install
       - run: CI=false npm run build #CI=fales so we dont error on warnings
       - run: sudo npm install -g @lhci/cli@0.3.x
-      - run: npm install serve # reequired to run the build
+      - run: sudo npm install serve -g # reequired to run the build
       - run: serve -s build
       - run:
           name: lhci autorun
