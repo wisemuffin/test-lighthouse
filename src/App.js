@@ -18,7 +18,7 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/" component={HomePage} />
-            <Route exact path="/index" component={HomePage} />
+            {/* <Route exact path="/index" component={HomePage} /> */}
           </Switch>
         </Router>
       </ThemeProvider>
